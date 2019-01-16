@@ -9,25 +9,25 @@
     crossorigin="anonymous"></script>
 </head>
 
-<body>
-  <div class="card mx-auto text-center">
-    <div class="card-body mx-auto">
+<body class="bg-light">
+  <div class="card mx-auto text-center bg-light">
+    <div class="card-body mx-auto bg-white">
       <h4 class="card-title">Invoice from Privateaser</h4>
       <p class="card-text">Here you can generate an invoice for each actors of the event</p>
       <div class="card mb-1" id="bar">
-        <div class="card-header">
+        <div class="card-header bg-secondary text-white">
           Bar
         </div>
-           <div class="card-body">
+        <div class="card-body">
           <input class="js-name text-center" type="text" placeholder="Bar name" />
           <input class="js-price-by-hour text-center" type="number" placeholder="Price by hour" />
           <input class="js-price-by-person text-center" type="number" placeholder="Price by person" />
         </div>
       </div>
       <div class="card" id="booker">
-          <div class="card-header">
-              Booker
-            </div>
+        <div class="card-header bg-secondary text-white">
+          Booker
+        </div>
         <div class="card-body">
           <input class="js-name text-center" type="text" placeholder="Booker name" />
           <input class="js-time text-center" type="number" placeholder="Time in h" />
@@ -38,12 +38,16 @@
           </p>
         </div>
       </div>
-      <button class="btn btn-primary m-2 mx-auto" id="compute">Compute</button>
-    </div>    
+      <button class="btn btn-primary mt-2 mx-auto" id="compute">Compute</button>
+    </div>
   </div>
-  <div class="card card-body mx-auto" id="actors"></div>
-    <script src="privateaser.js"></script>
-    <script src="index.js"></script>
+  <center>
+    <div class="card mx-auto d-inline-flex">
+      <div class="card-body" id="actors"></div>
+    </div>
+  </center>  
+  <script src="privateaser.js"></script>
+  <script src="index.js"></script>
 </body>
 
 </html>
