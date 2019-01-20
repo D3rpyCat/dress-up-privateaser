@@ -5,47 +5,50 @@
   <title>CSS/HTML Workshop with Privateaser</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
     crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="index.css">
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
     crossorigin="anonymous"></script>
 </head>
 
-<body class="bg-light">
-  <div class="card mx-auto text-center bg-light">
-    <div class="card-body mx-auto bg-white">
-      <h4 class="card-title">Invoice from Privateaser</h4>
-      <p class="card-text">Here you can generate an invoice for each actors of the event</p>
-      <div class="card mb-1" id="bar">
-        <div class="card-header bg-secondary text-white">
-          Bar
-        </div>
-        <div class="card-body">
-          <input class="js-name text-center" type="text" placeholder="Bar name" />
-          <input class="js-price-by-hour text-center" type="number" placeholder="Price by hour" />
-          <input class="js-price-by-person text-center" type="number" placeholder="Price by person" />
-        </div>
+<body class="row mt-3">
+  <div class="col" style="max-width:640px">
+    <div class="card mb-3 p-3 bg-dark text-white">
+      <h3 class="card-title invoice">Invoice from Privateaser</h3>
+      <p class="card-text text-center">Here you can generate an invoice for each actors of the event</p>
+    </div>
+    <div class="card bg-dark text-white mb-3" id="bar">
+      <div class="card-header text-white">
+        <img class="cocktail" src="cocktail.png" alt="cocktail">
+        Bar
       </div>
-      <div class="card" id="booker">
-        <div class="card-header bg-secondary text-white">
-          Booker
-        </div>
-        <div class="card-body">
-          <input class="js-name text-center" type="text" placeholder="Booker name" />
-          <input class="js-time text-center" type="number" placeholder="Time in h" />
-          <input class="js-persons text-center" type="number" placeholder="Persons" />
-          <br>
-          <p class="mt-2">Deductible option :
-            <input class="js-option" type="checkbox" placeholder="Deductible option" />
-          </p>
-        </div>
+      <div class="card-body">
+        <input class="js-name text-center" type="text" placeholder="Bar name" />
+        <input class="js-price-by-hour text-center" type="number" placeholder="Price by hour" />
+        <input class="js-price-by-person text-center" type="number" placeholder="Price by person" />
       </div>
-      <button class="btn btn-primary mt-2 mx-auto" id="compute">Compute</button>
+    </div>
+    <div class="card bg-dark text-white mb-3" id="booker">
+      <div class="card-header text-white">
+          <img class="connection" src="connection.png" alt="booker">
+        Booker
+      </div>
+      <div class="card-body">
+        <input class="js-name text-center" type="text" placeholder="Booker name" />
+        <input class="js-time text-center" type="number" placeholder="Time in h" />
+        <input class="js-persons text-center" type="number" placeholder="Persons" />
+        <br>
+        <p class="mt-2">Deductible option :
+          <input class="js-option" type="checkbox" placeholder="Deductible option" />
+        </p>
+      </div>
+    </div>
+    <div class="card bg-transparent" style="border:none">
+        <button class="btn btn-primary btn-lg mb-3" id="compute">Compute</button>
+    </div>    
+    <div class="card bg-dark text-white" style="border:none">
+      <div id="actors"></div>
     </div>
   </div>
-  <center>
-    <div class="card mx-auto d-inline-flex">
-      <div class="card-body" id="actors"></div>
-    </div>
-  </center>  
   <script src="privateaser.js"></script>
   <script src="index.js"></script>
 </body>

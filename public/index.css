@@ -1,0 +1,59 @@
+body {
+    background-image: url(blur-bright-close-up-1124960.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.invoice {
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+}
+
+.card {
+    float: left;
+    clear: both;
+    border: none;
+}
+
+.card-header {
+    background-color: #3FA39E;
+    font-size: 18px;
+}
+
+.row {
+    display: inline;
+}
+
+.col {
+    margin: auto;
+}
+
+.actor {
+    float: left;
+}
+
+img {
+    margin-right: 10px;
+}
+
+input {
+    padding: 3px;
+    border-radius: 10px;
+    border-color: #999999;
+    background-color: transparent;
+    border-width: 1.25px;
+    border-style: solid;
+}
+
+::placeholder {
+    color: #828282;
+}
+
+input,
+select,
+textarea {
+    color: white;
+}
